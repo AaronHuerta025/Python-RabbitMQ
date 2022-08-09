@@ -1,0 +1,10 @@
+Al tener un consumidor no debe de guardarse en la queue los mensajes 
+debemos poner la propiedad(auto_ack=True) para que no los guarde
+
+La queue registra su el mensaje pero no se guarda, si el publicador
+envia mensaje y no hay publicador si se guardara en la queue
+
+
+Por ejemplo en fanout al enviar los mensajes, sabemos que se enviaran a todas las queues
+pero al enviar y solo teniendo un consumidor de una queue en esa queue del consumidor no se guardara
+si en las demas no tenemos consumidor si se guardara
